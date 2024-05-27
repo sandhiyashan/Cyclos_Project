@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-26T22:30:10.323416" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Register" source="C:\Users\ASUS\Documents\GitHub\PilotProject_Cyclos_Team1\TestCases\test_register.robot">
+<test id="s1-t1" name="Valid register with all the fields" line="29">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:10.573220" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-26T22:30:10.573220" elapsed="1.683029"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:12.257245" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-26T22:30:12.257245" elapsed="1.180895"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-26T22:30:13.439137" elapsed="1.648124"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-26T22:30:15.087261" elapsed="0.002514"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:10.572219" elapsed="4.517556"/>
+</kw>
+<kw name="Go to Register Page" owner="HomeResource">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-26T22:30:20.092626" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-26T22:30:15.090178" elapsed="5.003381"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:20.095551" level="INFO">Clicking element 'xpath://div[text()=" Register "]'.</msg>
+<arg>${register_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:20.093559" elapsed="0.106917"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:15.090178" elapsed="5.110298"/>
+</kw>
+<kw name="Verify Register Page opens" owner="RegisterResource">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:21.841677" level="INFO">Element 'xpath://div[text()=" User registration "]' contains text 'User registration'.</msg>
+<arg>${verify_register}</arg>
+<arg>User registration</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-05-26T22:30:20.201473" elapsed="1.640204"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:20.201473" elapsed="1.640204"/>
+</kw>
+<kw name="Fill the Required feilds" owner="RegisterResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:21.843670" level="INFO">Typing text 'abc' into text field 'xpath://input-field[@formcontrolname="name"]/label-value/div/div/input'.</msg>
+<arg>${name_field}</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:21.842674" elapsed="0.096969"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:21.941148" level="INFO">Typing text 'abc12345' into text field 'xpath://input-field[@formcontrolname="username"]/label-value/div/div/input'.</msg>
+<arg>${loginName_field}</arg>
+<arg>${login_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:21.940146" elapsed="0.144894"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:22.086285" level="INFO">Typing text 'abc123@gmail.com' into text field 'xpath://input-field[@formcontrolname="email"]/input'.</msg>
+<arg>${email_field}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:22.085040" elapsed="0.161142"/>
+</kw>
+<arg>${name}</arg>
+<arg>${login}</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2024-05-26T22:30:21.842674" elapsed="0.403508"/>
+</kw>
+<kw name="Fill the Remaining profile feilds" owner="RegisterResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:22.249026" level="INFO">Typing text 'www.google.com' into text field 'css:input[name="website"]'.</msg>
+<arg>${website_field}</arg>
+<arg>${website}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:22.247555" elapsed="0.142559"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:22.391111" level="INFO">Clicking element 'css:button#business_type'.</msg>
+<arg>${business_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:22.390114" elapsed="0.064044"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:22.455596" level="INFO">Clicking link 'css:a#business_type_clothing'.</msg>
+<arg>${clothing}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:22.455596" elapsed="0.081807"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:22.538406" level="INFO">Typing text '9856743210' into text field 'xpath:(//input-field[@formcontrolname="number"]/input)[1]'.</msg>
+<arg>${mobile_number}</arg>
+<arg>${mobile_number1}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:22.538406" elapsed="0.153009"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:22.692417" level="INFO">Typing text '(201) 555-0123' into text field 'xpath:(//input-field[@formcontrolname="number"]/input)[2]'.</msg>
+<arg>${Landline_number}</arg>
+<arg>${landline}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:22.691415" elapsed="0.147519"/>
+</kw>
+<arg>${website}</arg>
+<arg>${gender2}</arg>
+<arg>${mobile}</arg>
+<arg>${land_line}</arg>
+<status status="PASS" start="2024-05-26T22:30:22.247555" elapsed="0.591379"/>
+</kw>
+<kw name="Enable address fields" owner="RegisterResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:22.843325" level="INFO">Clicking element 'xpath:(//label[@class="custom-control-label"])[3]'.</msg>
+<arg>${address_enable}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:22.843325" elapsed="0.107256"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:22.842111" elapsed="0.108470"/>
+</kw>
+<kw name="Fill the address fields" owner="RegisterResource">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:22.959605" level="INFO">Typing text 'gandhi street' into text field 'xpath:(//label-value[@class="label-on-side label-value any-label-value field"]/div/div/input)[3]'.</msg>
+<arg>${address_line1}</arg>
+<arg>${address}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:22.958603" elapsed="0.169641"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:23.129779" level="INFO">Typing text '637503' into text field 'css:input#zip'.</msg>
+<arg>${zip_code}</arg>
+<arg>${zip}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:23.129779" elapsed="0.130866"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:23.262023" level="INFO">Typing text 'salem' into text field 'css:input#city'.</msg>
+<arg>${city_field}</arg>
+<arg>${city}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:23.262023" elapsed="0.145235"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:23.408255" level="INFO">Typing text 'tamilnadu' into text field 'css:input#region'.</msg>
+<arg>${region_field}</arg>
+<arg>${region}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:23.407258" elapsed="0.143852"/>
+</kw>
+<arg>${address}</arg>
+<arg>${zip}</arg>
+<arg>${city}</arg>
+<arg>${region}</arg>
+<status status="PASS" start="2024-05-26T22:30:22.958603" elapsed="0.592507"/>
+</kw>
+<kw name="Click next button" owner="RegisterResource">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${next_btn}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-26T22:30:23.553109" elapsed="0.035349"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:23.589455" level="INFO">Clicking button 'xpath:(//action-button[@class="d-inline-block button"]/button)[3]'.</msg>
+<arg>${next_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:23.588458" elapsed="0.080351"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:23.552111" elapsed="0.116698"/>
+</kw>
+<kw name="fill password fields" owner="RegisterResource">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:23.673125" level="INFO">Typing password into text field 'xpath://input-field[@formcontrolname="value"]/label-value/div/div/input'.</msg>
+<msg time="2024-05-26T22:30:25.292520" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_field}</arg>
+<arg>${pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:23.671944" elapsed="1.715342"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:25.388362" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-05-26T22:30:25.387286" elapsed="0.007703"/>
+</kw>
+<arg>${password}</arg>
+<arg>${confirm_password}</arg>
+<status status="PASS" start="2024-05-26T22:30:23.670803" elapsed="1.724186"/>
+</kw>
+<kw name="click Registration confirmation checkbox" owner="RegisterResource">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:25.398124" level="INFO">Clicking element 'xpath://boolean-field[@class="form-field ng-untouched ng-pristine ng-valid"]/div/input'.</msg>
+<msg time="2024-05-26T22:30:26.629707" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-05-26T22:30:26.629707" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input type="checkbox" class="custom-control-input ng-untouched ng-pristine ng-valid" name="" id="id_9"&gt; is not clickable at point (395, 481). Other element would receive the click: ...&lt;label class="custom-control-label" for="id_9"&gt;&lt;/label&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF76A321F22+60322]
+	(No symbol) [0x00007FF76A29CE99]
+	(No symbol) [0x00007FF76A157EBA]
+	(No symbol) [0x00007FF76A1AF32E]
+	(No symbol) [0x00007FF76A1ACCF2]
+	(No symbol) [0x00007FF76A1AA18B]
+	(No symbol) [0x00007FF76A1A9356]
+	(No symbol) [0x00007FF76A19B491]
+	(No symbol) [0x00007FF76A1CC21A]
+	(No symbol) [0x00007FF76A19ADB6]
+	(No symbol) [0x00007FF76A1CC430]
+	(No symbol) [0x00007FF76A1EBC80]
+	(No symbol) [0x00007FF76A1CBFC3]
+	(No symbol) [0x00007FF76A199617]
+	(No symbol) [0x00007FF76A19A211]
+	GetHandleVerifier [0x00007FF76A63946D+3301613]
+	GetHandleVerifier [0x00007FF76A683693+3605267]
+	GetHandleVerifier [0x00007FF76A679410+3563664]
+	GetHandleVerifier [0x00007FF76A3D42F6+790390]
+	(No symbol) [0x00007FF76A2A74DF]
+	(No symbol) [0x00007FF76A2A33D4]
+	(No symbol) [0x00007FF76A2A3562]
+	(No symbol) [0x00007FF76A292F6F]
+	BaseThreadInitThunk [0x00007FF9BE14257D+29]
+	RtlUserThreadStart [0x00007FF9BF10AA48+40]
+</msg>
+<arg>${demo_checkbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-05-26T22:30:25.397019" elapsed="1.237817">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input type="checkbox" class="custom-control-input ng-untouched ng-pristine ng-valid" name="" id="id_9"&gt; is not clickable at point (395, 481). Other element would receive the click: ...&lt;label class="custom-control-label" for="id_9"&gt;&lt;/label&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF76A321F22+60322]
+	(No symbol) [0x00007FF76A29CE99]
+	(No symbol) [0x00007FF76A157EBA]
+	(No symbol) [0x00007FF76A1AF32E]
+	(No symbol) [0x00007FF76A1ACCF2]
+	(No symbol) [0x00007FF76A1AA18B]
+	(No symbol) [0x00007FF76A1A9356]
+	(No symbol) [0x00007FF76A19B491]
+	(No symbol) [0x00007FF76A1CC21A]
+	(No symbol) [0x00007FF76A19ADB6]
+	(No symbol) [0x00007FF76A1CC430]
+	(No symbol) [0x00007FF76A1EBC80]
+	(No symbol) [0x00007FF76A1CBFC3]
+	(No symbol) [0x00007FF76A199617]
+	(No symbol) [0x00007FF76A19A211]
+	GetHandleVerifier [0x00007FF76A63946D+3301613]
+	GetHandleVerifier [0x00007FF76A683693+3605267]
+	GetHandleVerifier [0x00007FF76A679410+3563664]
+	GetHandleVerifier [0x00007FF76A3D42F6+790390]
+	(No symbol) [0x00007FF76A2A74DF]
+	(No symbol) [0x00007FF76A2A33D4]
+	(No symbol) [0x00007FF76A2A3562]
+	(No symbol) [0x00007FF76A292F6F]
+	BaseThreadInitThunk [0x00007FF9BE14257D+29]
+	RtlUserThreadStart [0x00007FF9BF10AA48+40]
+</status>
+</kw>
+<status status="FAIL" start="2024-05-26T22:30:25.397019" elapsed="1.238815">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input type="checkbox" class="custom-control-input ng-untouched ng-pristine ng-valid" name="" id="id_9"&gt; is not clickable at point (395, 481). Other element would receive the click: ...&lt;label class="custom-control-label" for="id_9"&gt;&lt;/label&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF76A321F22+60322]
+	(No symbol) [0x00007FF76A29CE99]
+	(No symbol) [0x00007FF76A157EBA]
+	(No symbol) [0x00007FF76A1AF32E]
+	(No symbol) [0x00007FF76A1ACCF2]
+	(No symbol) [0x00007FF76A1AA18B]
+	(No symbol) [0x00007FF76A1A9356]
+	(No symbol) [0x00007FF76A19B491]
+	(No symbol) [0x00007FF76A1CC21A]
+	(No symbol) [0x00007FF76A19ADB6]
+	(No symbol) [0x00007FF76A1CC430]
+	(No symbol) [0x00007FF76A1EBC80]
+	(No symbol) [0x00007FF76A1CBFC3]
+	(No symbol) [0x00007FF76A199617]
+	(No symbol) [0x00007FF76A19A211]
+	GetHandleVerifier [0x00007FF76A63946D+3301613]
+	GetHandleVerifier [0x00007FF76A683693+3605267]
+	GetHandleVerifier [0x00007FF76A679410+3563664]
+	GetHandleVerifier [0x00007FF76A3D42F6+790390]
+	(No symbol) [0x00007FF76A2A74DF]
+	(No symbol) [0x00007FF76A2A33D4]
+	(No symbol) [0x00007FF76A2A3562]
+	(No symbol) [0x00007FF76A292F6F]
+	BaseThreadInitThunk [0x00007FF9BE14257D+29]
+	RtlUserThreadStart [0x00007FF9BF10AA48+40]
+</status>
+</kw>
+<kw name="click submit button" owner="RegisterResource">
+<status status="NOT RUN" start="2024-05-26T22:30:26.637307" elapsed="0.000000"/>
+</kw>
+<kw name="verify the registration is successful" owner="RegisterResource">
+<status status="NOT RUN" start="2024-05-26T22:30:26.638311" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-26T22:30:26.640304" elapsed="3.820076"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:26.639348" elapsed="3.821032"/>
+</kw>
+<status status="FAIL" start="2024-05-26T22:30:10.571186" elapsed="19.890119">ElementClickInterceptedException: Message: element click intercepted: Element &lt;input type="checkbox" class="custom-control-input ng-untouched ng-pristine ng-valid" name="" id="id_9"&gt; is not clickable at point (395, 481). Other element would receive the click: ...&lt;label class="custom-control-label" for="id_9"&gt;&lt;/label&gt;
+  (Session info: chrome=125.0.6422.78)
+Stacktrace:
+	GetHandleVerifier [0x00007FF76A321F22+60322]
+	(No symbol) [0x00007FF76A29CE99]
+	(No symbol) [0x00007FF76A157EBA]
+	(No symbol) [0x00007FF76A1AF32E]
+	(No symbol) [0x00007FF76A1ACCF2]
+	(No symbol) [0x00007FF76A1AA18B]
+	(No symbol) [0x00007FF76A1A9356]
+	(No symbol) [0x00007FF76A19B491]
+	(No symbol) [0x00007FF76A1CC21A]
+	(No symbol) [0x00007FF76A19ADB6]
+	(No symbol) [0x00007FF76A1CC430]
+	(No symbol) [0x00007FF76A1EBC80]
+	(No symbol) [0x00007FF76A1CBFC3]
+	(No symbol) [0x00007FF76A199617]
+	(No symbol) [0x00007FF76A19A211]
+	GetHandleVerifier [0x00007FF76A63946D+3301613]
+	GetHandleVerifier [0x00007FF76A683693+3605267]
+	GetHandleVerifier [0x00007FF76A679410+3563664]
+	GetHandleVerifier [0x00007FF76A3D42F6+790390]
+	(No symbol) [0x00007FF76A2A74DF]
+	(No symbol) [0x00007FF76A2A33D4]
+	(No symbol) [0x00007FF76A2A3562]
+	(No symbol) [0x00007FF76A292F6F]
+	BaseThreadInitThunk [0x00007FF9BE14257D+29]
+	RtlUserThreadStart [0x00007FF9BF10AA48+40]
+</status>
+</test>
+<test id="s1-t2" name="register from login page" line="43">
+<kw name="Open the Browser with URL" owner="GenericResource" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:30.465619" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${brower_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-05-26T22:30:30.465619" elapsed="1.590766"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:32.056385" level="INFO">Opening url 'https://demo.cyclos.org/ui/home'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-05-26T22:30:32.056385" elapsed="0.929017"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-26T22:30:32.985402" elapsed="1.652779"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-26T22:30:34.638181" elapsed="0.001994"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:30.464575" elapsed="4.175600"/>
+</kw>
+<kw name="Go to Login Page" owner="HomeResource">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-26T22:30:39.642796" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-26T22:30:34.642417" elapsed="5.000379"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:39.643807" level="INFO">Clicking element 'xpath:(//div[@class="ml-2"])[3]'.</msg>
+<arg>${login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:39.642796" elapsed="0.103901"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:34.641390" elapsed="5.105307"/>
+</kw>
+<kw name="click register page" owner="LoginResource">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:39.749180" level="INFO">Clicking link 'xpath://a[text()=" Not a user yet? Register here. "]'.</msg>
+<arg>${register}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-26T22:30:39.748178" elapsed="0.063285"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-26T22:30:44.812773" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-26T22:30:39.811463" elapsed="5.001310"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:39.746697" elapsed="5.066076"/>
+</kw>
+<kw name="Set Browser Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-05-26T22:30:44.814709" elapsed="0.006167"/>
+</kw>
+<kw name="assert title" owner="RegisterResource">
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2024-05-26T22:30:44.829521" level="INFO">${title} = User registration - Cyclos</msg>
+<var>${title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-05-26T22:30:44.822873" elapsed="0.006648"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${title}</arg>
+<arg>${tit}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-05-26T22:30:44.829521" elapsed="0.001216"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:44.820876" elapsed="0.009861"/>
+</kw>
+<kw name="Close Browser Session" owner="GenericResource" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-05-26T22:30:44.832027" elapsed="2.282616"/>
+</kw>
+<status status="PASS" start="2024-05-26T22:30:44.832027" elapsed="2.282616"/>
+</kw>
+<tag>registration moves</tag>
+<status status="PASS" start="2024-05-26T22:30:30.462300" elapsed="16.653357"/>
+</test>
+<doc>Test to Register Page</doc>
+<status status="FAIL" start="2024-05-26T22:30:10.325420" elapsed="36.794213"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">registration moves</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" skip="0" id="s1" name="Test Register">Test Register</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
